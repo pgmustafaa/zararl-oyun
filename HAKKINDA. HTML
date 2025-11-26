@@ -3,46 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zombozo Oyunu Hakkında Bilgilendirme</title>
+    <title>Zombozo | Hakkında</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Zombozo Oyunu Hakkında</h1>
-        <nav>
-            <a href="index.html">Ana Sayfa</a>
-            <a href="hakkinda.html">Hakkında</a>
-            <a href="zararlar.html">Zararları</a>
-            <a href="iletisim.html">İletişim</a>
-        </nav>
+    <header class="site-header">
+        <div class="container">
+            <div class="top">
+                <div class="brand">
+                    <h1>Zombozo</h1>
+                    <small>Hayatta Kalma & Atmosfer</small>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:10px">
+                    <button class="nav-toggle" id="nav-toggle">☰</button>
+                    <button id="theme-toggle" class="btn secondary">🌙 Karanlık Mod</button>
+                </div>
+
+                <nav>
+                    <ul id="main-nav">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="zararlar.html">Zararlar</a></li>
+                        <li><a href="about.html" class="active">Hakkında</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <section id="hakkinda">
-        <h2>Oyun Hakkında</h2>
+    <main class="content">
+        <h2>Hakkında</h2>
         <p>
-            Zombozo, bazı çevrimiçi platformlarda ortaya çıkan ve kullanıcıları rahatsız eden bir oyun olarak bilinmektedir.
-            Bu site, oyunun olası zararları hakkında farkındalık yaratmak amacıyla hazırlanmıştır.
+            Merhaba! Ben <strong>Zombozo Ekibi </strong>. Oyun geliştirmeye olan ilgim küçük yaşlarda başladı. 
+            Kodlama, hikâye anlatımı ve atmosfer oluşturma konularına tutkuluyum.
         </p>
-        <p>
-            Oyun, internet kültürünün karanlık bir köşesinden ortaya çıkan ve özellikle genç kullanıcıları hedefleyen bir yapıda tasarlanmıştır. 
-            Psikolojik olarak rahatsız edici unsurları içeren bu oyun, zaman içinde sosyal medya platformlarında yayılmış ve birçok kişiyi olumsuz etkilemiştir.
-        </p>
-        <p>
-            Zombozo'nun temel amacı, oyuncuları korkutmak ve onları rahatsız etmektir. Oyun, ani ses efektleri, korkutucu görüntüler ve unpredictable jump-scare sahneleri içerek 
-            oyuncuların sinir sistemini tahrik etmek için tasarlanmıştır. Bu tür içerikler, özellikle çocuklar ve gençler arasında psikolojik sorunlar yaratabilir.
-        </p>
-    </section>
 
-    <section id="youtube-button">
-        <button onclick="openYouTube()">Zombozo Youtube </button>
-    </section>
+        <p>
+            <strong>Zombozo</strong>, zombi temalı bir hayatta kalma oyunudur. Oyuncuların stratejik düşünme becerilerini 
+            geliştirirken aynı zamanda onları karanlık ve tehlikeli bir dünyada sınamayı amaçlıyor.
+        </p>
+
+        <section class="mission">
+            <h3>Oyunun Amacı</h3>
+            <p>
+                Zombozo yalnızca bir aksiyon oyunu değildir — aynı zamanda korku ve gerilim temalarının insan psikolojisi 
+                üzerindeki etkilerini fark ettirmeyi amaçlar.
+            </p>
+        </section>
+
+        <section class="future">
+            <h3>Gelecek Planları</h3>
+            <p>
+                İlerleyen dönemlerde Zombozo'nun yeni sürümleriyle birlikte daha geniş haritalar, derin hikâye anlatımı 
+                ve topluluk destekli modlar eklemeyi planlıyorum.
+            </p>
+        </section>
+
+        <a href="index.html" class="btn">Ana Sayfaya Dön</a>
+    </main>
 
     <footer>
-        <p>© 2025 Zombozo Bilgilendirme Sitesi | Tüm hakları saklıdır.</p>
+        <p>© 2025 Zombozo Ekibi | Zombozo</p>
     </footer>
 
     <script src="script.js"></script>
-    <link rel="youtube-button" href="https://www.youtube.com/@pgmustafaa">
-  
 </body>
 </html>
