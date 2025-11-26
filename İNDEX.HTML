@@ -3,49 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zombozo Oyunu Hakkında Bilgilendirme</title>
+    <title>Zombozo | Ana Sayfa</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Zombozo Oyunu Hakkında</h1>
-        <nav>
-            <a href="index.html">Ana Sayfa</a>
-            <a href="hakkinda.html">Hakkında</a>
-            <a href="zararlar.html">Zararları</a>
-          
-        </nav>
+    <header class="site-header">
+        <div class="container">
+            <div class="top">
+                <div class="brand">
+                    <h1>Zombozo</h1>
+                    <small>Hayatta Kalma & Atmosfer</small>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:10px">
+                    <button class="nav-toggle" id="nav-toggle">☰</button>
+                    <button id="theme-toggle" class="btn secondary">🌙 Karanlık Mod</button>
+                </div>
+
+                <nav>
+                    <ul id="main-nav">
+                        <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                        <li><a href="zararlar.html">Zararlar</a></li>
+                        <li><a href="about.html">Hakkında</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
     </header>
 
-    <section id="anasayfa" class="hero">
-        <h2>Hoş Geldiniz</h2>
-        <p>Bu site Zombozo oyununun zararları hakkında farkındalık yaratmak amacıyla hazırlanmıştır.</p>
-        <div class="buttons">
-            <a href="hakkinda.html" class="btn">Hakkında Oku</a>
-            <a href="zararlar.html" class="btn">Zararları Öğren</a>
-            
+    <main>
+        <section class="hero">
+            <div class="hero-inner container">
+                <h2>Zombozo — Karanlık dünyada hayatta kalma deneyimi. Bilinmeyenle yüzleşmeye hazır mısın?</h2>
+                <p>Bu sunum için kısa bir özet: oyunun riskleri, amaçları ve gelecek planları. Öğretmenlerin dikkatini çekmek için tasarım sade ama etkileyici tutuldu.</p>
+
+                <div class="buttons">
+                    <a href="zararlar.html" class="btn">Zararları Öğren</a>
+                    <a href="about.html" class="btn secondary">Detaylı Bilgi</a>
+                </div>
+
+                <div class="features" style="margin-top:28px">
+                    <div class="card">
+                        <h3>Gerilim Atmosferi</h3>
+                        <p>Karanlık görseller ve ses tasarımı ile oyuncular etkileyici bir deneyim yaşıyor.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Eğitsel Mesaj</h3>
+                        <p>Oyun, risklerin farkına varmayı ve stratejik düşünmeyi teşvik eder.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Gelecek Planları</h3>
+                        <p>Yeni haritalar, hikâye modları ve topluluk özellikleri hedefleniyor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© Zombozo Ekibi | Zombozo</p>
         </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Zombozo Bilgilendirme Sitesi | Tüm hakları saklıdır.</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
-    </section>
-
-    <section id="youtube-button">
-        <button onclick="openYouTube()">Zombozo Youtube </button>
-    </section>
-
-    <footer>
-        <p>© 2025 Zombozo Bilgilendirme Sitesi | Tüm hakları saklıdır.</p>
-    </footer>
+</main>
 
     <script src="script.js"></script>
-    <link rel="youtube-button" href="https://www.youtube.com/@pgmustafaa">
-  
 </body>
 </html>
