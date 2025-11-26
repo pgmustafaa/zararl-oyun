@@ -1,0 +1,77 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // 📩 İletişim formu işlemleri
+    const form = document.getElementById("contact-form");
+    const response = document.getElementById("response-message");
+
+    if (form) {
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const message = form.message.value.trim();
+
+            if (name && email && message) {
+                if (response) {
+                    response.textContent = "Teşekkürler, mesajın başarıyla gönderildi!";
+                    response.style.color = "#00ff6a";
+                }
+                form.reset();
+            } else {
+                if (response) {
+                    response.textContent = "Lütfen tüm alanları doldur.";
+                    response.style.color = "#ff3c00";
+                }
+            }
+        });
+    }
+
+    // 🌫️ Scroll animasyonları
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.content section, .mission, .future, .contact').forEach(section => {
+        observer.observe(section);
+    });
+
+    // 🌗 Tema değiştirme
+    const themeToggle = document.getElementById("theme-toggle");
+
+    if (themeToggle) {
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme === "light") {
+            document.body.classList.add("light-mode");
+            themeToggle.textContent = "🌙 Karanlık Mod";
+        } else {
+            themeToggle.textContent = "☀️ Aydınlık Mod";
+        }
+
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            if (document.body.classList.contains("light-mode")) {
+                themeToggle.textContent = "🌙 Karanlık Mod";
+                localStorage.setItem("theme", "light");
+            } else {
+                themeToggle.textContent = "☀️ Aydınlık Mod";
+                localStorage.setItem("theme", "dark");
+            }
+        });
+    }
+
+    // ☰ Mobil menü toggle (tüm sayfalarda ortak)
+    const navToggle = document.getElementById('nav-toggle');
+    if (navToggle) {
+        navToggle.addEventListener('click', function(){
+            const nav = document.getElementById('main-nav');
+            if(!nav) return;
+            if(nav.style.display === 'block') nav.style.display = '';
+            else nav.style.display = 'block';
+        });
+    }
+});
